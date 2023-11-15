@@ -2,50 +2,65 @@
 const trainingTopText = document.getElementsByClassName("top-text-1");
 trainingTopText[0].innerText = "want to become a";
 let courses = document.getElementById("courses");
-courses.innerText = "software Engineer?"
 const trainingDescription = document.getElementById("training-description");
 trainingDescription.innerText =
 "Jumps tart your journey in tech with our courses in Computer Science, Full-Stack Web development,\
  Data Engineering and UI/UX Design. Get hands-on experience and gain essential skills for a successful\
  tech career.";
 
-var speed = 50; // Adjust the speed of the animation (milliseconds per character)
 
-function animateText() {
-   var container = document.getElementById("animatedText");
-   container.innerHTML = ''; // Clear previous content
-   var i = 0;
 
-   // Function to show text from left to right
-   function typeWriter() {
-     if (i < courses.length) {
-       container.innerHTML += courses.charAt(i);
-       i++;
-       setTimeout(typeWriter, speed);
-     } else {
-       // Start the function to hide text from right to left after a delay
-       setTimeout(eraseText, 1000);
-     }
-   }
+const phrases = ["Software Engineer?", "Data Engineer?", "UI/UX Designer?"];
+const speed = 100;
+const coursesContainer = document.getElementById("courses");
 
-   // Function to hide text from right to left
-   function eraseText() {
-     if (i >= 0) {
-       container.innerHTML = courses.substring(0, i - 1);
-       i--;
-       setTimeout(eraseText, speed);
-     } else {
-       // Restart the animation after a delay
-       setTimeout(animateText, 1000);
-     }
-    }
-
-   // Start the animation
-typeWriter();
+function animatePhrases(index) {
+  if (index < phrases.length) {
+    animatePhrase(phrases[index], function () {
+      // callback function to start the next phrase animation
+      animatePhrases(index + 1);
+    });
+  } else {
+    // reset index to 0 and start the animation loop again
+    setTimeout(function () {
+      animatePhrases(0);
+    }, 200); // Add a delay before restarting the animation
+  }
 }
 
- // Start the animation when the page loads
- window.onload = animateText;
+function animatePhrase(phrase, callback) {
+   let i = 0;
+
+   function typeWriter() {
+    if (i < phrase.length) {
+          coursesContainer.innerHTML += phrase.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        } else {
+          setTimeout(erasePhrase, 1250, callback);
+        }
+    }
+
+   function erasePhrase(callback) {
+    if (i >= 0) {
+        coursesContainer.innerHTML = phrase.substring(0, i - 1);
+        i--;
+        setTimeout(erasePhrase, 50, callback);
+    } else {
+          // clear the container after erasing the phrase
+        coursesContainer.innerHTML = '';
+          // ctart the next phrase animation
+        callback();
+    }
+   }
+
+   typeWriter();
+}
+
+    // Start the animation when the page loads
+window.onload = function () {
+    animatePhrases(0);
+};
  
 const colors = [
     "rgba(51, 235, 168, 0.9)",
@@ -62,4 +77,4 @@ function changeColor() {
     currentColorIndex = (currentColorIndex + 1) % colors.length;
 }
 
-setInterval(changeColor, 3500);
+setInterval(changeColor, 2400);

@@ -170,8 +170,8 @@ body{
     padding: 10px;
 }
 
-#animatedText {
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflowing content */
+#courses {
+    white-space: nowrap;
+    overflow: hidden;
     border-right: 2px solid black;
-} 
+  }
