@@ -19,7 +19,6 @@ function animatePhrases(index) {
 
 function animatePhrase(phrase, callback) {
   let i = 0;
-
   function typeWriter() {
     if (i < phrase.length) {
       coursesContainer.innerHTML += phrase.charAt(i);
@@ -31,7 +30,6 @@ function animatePhrase(phrase, callback) {
       }, 1250);
     }
   }
-
   function erasePhrase(callback) {
     if (i >= 0) {
       coursesContainer.innerHTML = phrase.substring(0, i - 1);
@@ -45,7 +43,6 @@ function animatePhrase(phrase, callback) {
       changeColor();
     }
   }
-
   typeWriter();
 }
 
@@ -70,32 +67,23 @@ function changeColor() {
 }
 
 menuIcon.addEventListener("click", function() {
+  openOverlay();
+});
+
+document.getElementById("close-icon").addEventListener("click", function() {
+  closeOverlay();
+});
+
+function openOverlay() {
   overlay.style.display = "block";
   setTimeout(() => {
     overlay.style.opacity = 1;
-    addCloseButton();
   }, 10);
-});
+}
 
 function closeOverlay() {
   overlay.style.opacity = 0;
   setTimeout(() => {
     overlay.style.display = "none";
-    removeCloseButton();
-  }, 500); 
-}
-
-function addCloseButton() {
-  const closeButton = document.createElement("button");
-  closeButton.textContent = "Close";
-  closeButton.addEventListener("click", closeOverlay);
-  document.getElementById("menu-content").appendChild(closeButton);
-}
-
-function removeCloseButton() {
-  const closeButton = document.querySelector("#menu-content button");
-  if (closeButton) {
-    closeButton.removeEventListener("click", closeOverlay);
-    closeButton.parentNode.removeChild(closeButton);
-  }
+  }, 500);
 }
