@@ -172,12 +172,12 @@
                 </div>
                 <div class="programs-option">
                     <div class="programs-name">
-                        <div id="fcs">FCS</div>
-                        <div id="fsw">FSW</div>
-                        <div id="fsd">FSD</div>
-                        <div id="uix">UIX</div>
+                        <div class="btn" id="fcs" onclick="toggleActive(this)">FCS</div>
+                        <div class="btn active" id="fsw" onclick="toggleActive(this)">FSW</div>
+                        <div class="btn" id="fsd" onclick="toggleActive(this)">FSD</div>
+                        <div class="btn"  id="uix" onclick="toggleActive(this)">UIX</div>
                     </div>
-                    <div class="programs-description">
+                    <div class="programs-description" id="fsw-card" style="display: block;">
                         <div class="program-text">
                             <div class="program-text-title"><span class="green-color">> FSW:</span> 
                                 Full-Stack Web Development</div>
@@ -198,9 +198,71 @@
                                 <div class="learn-more">LEARN MORE ></div>
                             </div>
                         </div>
-                        <div class="programs-image"> <img src="./assets/fsw.png" alt=""></div>
+                        <!-- <div class="programs-image"> <img src="./assets/fsw.png" alt=""></div> -->
+                    </div>
+
+                    <div class="programs-description" id="fsc-card" style="display: none;">
+                        <div class="program-text">
+                            <div class="program-text-title"> <span class="yellow-color">> FCS: </span>Foundations of Computer Science</div>
+                            <div class="text-body">// This 9-week course covers fundamental topics in computer science, including data structures, 
+                                algorithms, and foundational concepts. It is suitable for coding enthusiasts, former computer science students, and 
+                                beginners who wish to learn Python programming, object-oriented programming, file systems, and more. The course includes 
+                                online video materials, assignments, and instructor-led sessions.
+                            </div>
+                            <div class="text-footer">
+                                <div class="bootcamp-date">
+                                    next bootcamp date | <span class="fcs-date">To be confirmed</span>
+                                </div>
+                                <div class="learn-more">LEARN MORE ></div>
+                            </div>
+                        </div>
+                        <!-- <div class="programs-image"> <img src="./assets/fsw.png" alt=""></div> -->
+                    </div>
+
+                    <div class="programs-description" id="fsd-card" style="display: none;">
+                        <div class="program-text">
+                            <div class="program-text-title"><span class="purple-color"> > FSD: </span>Full-Stack Data</div>
+                            <div class="text-body">// SE Factory's 12-week Full-Stack Data course offers robust training in data analysis and engineering. 
+                                Participants learn to handle large data sets with Python and use libraries like Pandas, NumPy, and Matplotlib for data manipulation and
+                                 visualization. The course also delves into cloud orchestration, distributed computing, relational databases, and SQL basics. 
+                                 Hands-on projects provide real-world data analysis experience. Upon completion, students gain proficiency in Python for analytics, understand
+                                 data warehousing, and can effectively visualize and present data insights.
+                            </div>
+                            <div class="text-footer">
+                                <div class="bootcamp-date">
+                                    next bootcamp date | <span class="fsd-date">To be confirmed</span>
+                                </div>
+                                <div class="learn-more">LEARN MORE ></div>
+                            </div>
+                        </div>
+                        <!-- <div class="programs-image"> <img src="./assets/fsw.png" alt=""></div> -->
+                    </div>
+
+                    <div class="programs-description" id="uix-card" style="display: none;">
+                        <div class="program-text">
+                            <div class="program-text-title"><span class="fuschia-color"> > UIX: </span>UI/UX Design Bootcamp</div>
+                            <div class="text-body">// SE Factory's 6-week UI/UX course offers immersive learning in UI/UX design. 
+                                It encompasses the essentials of UI/UX, from mastering Figma, color psychology, typography to UX heuristics, 
+                                prototyping and WCAG guidelines. Learners work on projects, transforming wireframes into mockups, and creating responsive 
+                                interfaces. The course culminates in a final project, enabling students to conduct a thorough UX audit, revamp a website, 
+                                and create a well-documented case study. Graduates leave equipped with a polished portfolio and market-ready skills in UI/UX design.
+                            </div>
+                            <div class="text-footer">
+                                <div class="bootcamp-date">
+                                    next bootcamp date | <span class="uix-date">To be confirmed</span>
+                                </div>
+                                <div class="learn-more">LEARN MORE ></div>
+                            </div>
+                        </div>
+                        <!-- <div class="programs-image"> <img src="./assets/fsw.png" alt=""></div> -->
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="testemonials">
+            <div class="testemonials-container">
+                
             </div>
         </section>
 

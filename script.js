@@ -87,3 +87,54 @@ function closeOverlay() {
     overlay.style.display = "none";
   }, 500);
 }
+
+const fswCard = document.getElementById('fsw-card');
+const fscCard = document.getElementById('fsc-card');
+const fsdCard = document.getElementById('fsd-card');
+const uixCard = document.getElementById('uix-card');
+
+const fcsButton = document.getElementById('fcs');
+const fswButton = document.getElementById('fsw');
+const fsdButton = document.getElementById('fsd');
+const uixButton = document.getElementById('uix');
+
+
+function showProgram(programCard) {
+    [fswCard, fscCard, fsdCard, uixCard].forEach(card => card.style.display = 'none');
+
+    programCard.style.display = 'block';
+}
+
+fcsButton.addEventListener('click', function () {
+    showProgram(fscCard);
+});
+
+fswButton.addEventListener('click', function () {
+    showProgram(fswCard);
+});
+
+fsdButton.addEventListener('click', function () {
+    showProgram(fsdCard);
+});
+
+uixButton.addEventListener('click', function () {
+    showProgram(uixCard);
+});
+
+
+window.onload = function () {
+    showProgram(fswCard);
+};
+
+function toggleActive(button) {
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(function(btn) {
+    btn.classList.remove('active');
+  });
+  
+  button.classList.add('active');
+
+  const container = document.querySelector('.programs-container');
+  const computedStyle = window.getComputedStyle(button);
+  container.style.backgroundColor = computedStyle.color;
+}

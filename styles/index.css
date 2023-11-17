@@ -580,25 +580,81 @@ body{
 .programs-name{
     display: flex;
     justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+    width: 50%
+}
+.btn{
     font-size: 16px;
     font-weight: 900;
     line-height: 21px;
-    /* height: 7%; */
-    width: 40%;
-    padding: 20px 30px;
-    text-align: center;
-    cursor: pointer;
+    padding: 20px 50px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+#fsw.active{
+    background-color: #363738; 
+    color: #28EEA7; 
 }
 
-.program-name:hover{
-    background-color: #363738;
+.fsw-date,
+.uix-date,
+.fsd-date,
+.fsc-date{
+    font-size:14px;
+    font-weight: 800;
+    line-height: 20px;
+    color: rgba(51, 235, 168);
+}
+
+.uix-date{
+    color: #FB508E;
+}
+
+.fsd-date{
+    color: #9864DA;
+}
+
+
+.fcs-date{
+    color: #FFC635; 
 }
 
 .green-color{
     color: rgba(51, 235, 168);
 }
+
+.yellow-color{
+    color: #FFC635; 
+}
+
+.purple-color{
+    color: #9864DA;
+}
+
+.fuschia-color{
+    color: #FB508E;
+}
+
+#fcs.active {
+    color: #FFC635; 
+}
+
+#fsd.active { 
+    color: #9864DA; 
+}
+
+#uix.active {
+    color: #FB508E; 
+}
+
+.active{
+    background-color: #363738;
+}
+
 .programs-description{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     align-content: center;
@@ -612,7 +668,8 @@ body{
     flex-direction: column;
     height: 90%;
     width: 60%;
-    margin-left:2.5%;
+    margin-left:2.5%; 
+    margin-top: 2.5%;
 }
 
 .program-text-title{
@@ -632,13 +689,15 @@ body{
     color:#dcdee1;
 }
 .text-body{
-    width:97.5%;
+    /* width:97.5%; */
     margin-bottom: 10%;
 }
-
+.programs-image{
+    width: 400px;
+}
 .programs-image img{
-    height: 380px;
-    width: auto;
+    width: 380px;
+    height: auto;
 }
 
 .text-footer{
@@ -653,13 +712,6 @@ body{
     padding: 12.5px;
 }
 
-.fsw-date{
-    font-size:14px;
-    font-weight: 800;
-    line-height: 20px;
-    color: rgba(51, 235, 168);
-}
-
 .learn-more{
     font-size: 16px;
     font-weight: 800;
@@ -667,6 +719,8 @@ body{
     color:#dcdee1;
     padding-left: 200px;
 }
+
+
 
 /* .upper-stats .box-left{
     width: 55%;
