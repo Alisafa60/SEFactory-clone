@@ -1,8 +1,7 @@
 const coursesContainer = document.getElementById("courses");
 const phrases = ["Software Engineer?", "Data Engineer?", "UI/UX Designer?"];
 const menuIcon = document.getElementById("menu-icon");
-const overlay = document.getElementById("overlay-menu");
-
+ const overlay = document.getElementById("overlay-menu");
 
 function animatePhrases(index) {
   if (index < phrases.length) {
@@ -121,10 +120,6 @@ uixButton.addEventListener('click', function () {
     showProgram(uixCard);
 });
 
-
-window.onload = function () {
-    showProgram(fswCard);
-};
 
 function toggleActive(button) {
   const buttons = document.querySelectorAll('.btn');
