@@ -739,6 +739,7 @@ body{
     background-color:#363738;
     border-radius: 10px;
     align-items: center;
+    margin-bottom: 6%;
 }
 
 .statement{
@@ -796,6 +797,19 @@ body{
     line-height: 14px;
     font-weight: 400;
     color:#fcfcfd;
+}
+.card-buttons{
+    display: flex;
+    /*
+    /* justify-content: space-evenly; */
+}
+
+.circle{
+    width: 10px;
+    height: 10px;
+    margin: 15px;
+    border-radius: 50%;
+    background-color: rgb(172, 172, 172);
 }
 /* .upper-stats .box-left{
     width: 55%;
